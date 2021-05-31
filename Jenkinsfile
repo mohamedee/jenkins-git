@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    load env.groovy
     stages {
         stage('Build') {
             steps {
