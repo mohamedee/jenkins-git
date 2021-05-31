@@ -6,7 +6,7 @@ pipeline {
             steps {
                 
                   script {
-            def props = readProperties file: 'extravars.properties'
+            def props = readProperties file: 'vars.properties'
             env.WEATHER = props.WEATHER
                       }
                 sh "echo The weather is $WEATHER"
