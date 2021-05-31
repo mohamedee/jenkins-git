@@ -15,7 +15,7 @@ pipeline {
             env = props
                       }
                 sh "echo The weather is $GRAFANA_ACCESS_BEARER"
-                sh "curl -X POST --insecure -H 'Authorization: Bearer $GRAFANA_ACCESS_BEARER  ' -H 'Content-Type: application/json' -d @dashboard.json http://admin:ryfsp1WzchgknU1pPrghxYT4GbQVjGEjm5SDDT3G@${env.IP}:${env.PORT}/api/dashboards/db"
+                sh "curl -X POST --insecure -H 'Authorization: Bearer $GRAFANA_ACCESS_BEARER  ' -H 'Content-Type: application/json' -d @dashboard.json http://$GRAFANA_USERNAME:$GRAFANA_PASSWORD@${env.IP}:${env.PORT}/api/dashboards/db"
                 sh '''
                     echo "Multiline shell steps works too yes!  "
                     ls -lah
