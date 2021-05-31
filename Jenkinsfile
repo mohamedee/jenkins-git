@@ -2,8 +2,8 @@ pipeline {
     agent any
     environment {
         GRAFANA_ACCESS_BEARER   = credentials('GRAFANA_ACCESS_BEARER')
-        GRAFANA_USERNAME = credentials('jenkins-aws-secret-access-key')
-        GRAFANA_PASSWORD = credentials('jenkins-aws-secret-access-key')
+        GRAFANA_USERNAME = credentials('GRAFANA_USERNAME')
+        GRAFANA_PASSWORD = credentials('GRAFANA_PASSWORD')
     }
   
     stages {
